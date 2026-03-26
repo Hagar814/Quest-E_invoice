@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "creation": "2024-10-09 16:21:42.422229",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "electronic_signature_device_endpoint",
+  "auth_token",
+  "token_expiry",
+  "enable",
+  "client_id",
+  "client_secret",
+  "id",
+  "column_break_7",
+  "name1",
+  "activity_code",
+  "region_city",
+  "street",
+  "building_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "electronic_signature_device_endpoint",
+   "fieldtype": "Data",
+   "label": "Electronic Signature Device Endpoint"
+  },
+  {
+   "fieldname": "auth_token",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Auth Token"
+  },
+  {
+   "fieldname": "token_expiry",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Token Expiry"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "label": "Client ID",
+   "mandatory_depends_on": "enable"
+  },
+  {
+   "fieldname": "client_secret",
+   "fieldtype": "Password",
+   "label": "Client Secret",
+   "mandatory_depends_on": "enable"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "ID"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "activity_code",
+   "fieldtype": "Data",
+   "label": "Activity Code"
+  },
+  {
+   "fieldname": "region_city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "street",
+   "fieldtype": "Data",
+   "label": "Street"
+  },
+  {
+   "fieldname": "building_number",
+   "fieldtype": "Data",
+   "label": "Building Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-10-09 16:21:42.422229",
+ "modified_by": "Administrator",
+ "module": "E Invoice",
+ "name": "Merquri E Invoice Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "E-invoice Manger",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
