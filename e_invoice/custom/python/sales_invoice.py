@@ -464,7 +464,7 @@ def post_invoice(docnames, e_invoice_log=""):
                 "payment": {
                     "bankName": sales_invoice.bank if sales_invoice.bank else "",
                     "bankAddress": "",
-                    "bankAccountNo": sales_invoice.bank_account_no if sales_invoice.bank_account_no else "",
+                    "bankAccountNo": sales_invoice.bank_account_no_eta if sales_invoice.bank_account_no_eta else "",
                     "bankAccountIBAN": sales_invoice.iban if sales_invoice.iban else "",
                     "swiftCode": sales_invoice.swift_code if sales_invoice.swift_code else "",
                     "terms": sales_invoice.p_terms if sales_invoice.p_terms else ""
@@ -888,7 +888,7 @@ def credit_note(docnames, e_invoice_log=''):
                 "payment": {
                     "bankName": sales_invoice.bank if sales_invoice.bank else "",
                     "bankAddress": "",
-                    "bankAccountNo": sales_invoice.bank_account_no if sales_invoice.bank_account_no else "",
+                    "bankAccountNo": sales_invoice.bank_account_no_eta if sales_invoice.bank_account_no_eta else "",
                     "bankAccountIBAN": sales_invoice.iban if sales_invoice.iban else "",
                     "swiftCode": sales_invoice.swift_code if sales_invoice.swift_code else "",
                     "terms": sales_invoice.p_terms if sales_invoice.p_terms else ""
