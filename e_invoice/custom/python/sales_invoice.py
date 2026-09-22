@@ -458,7 +458,7 @@ def post_invoice(docnames, e_invoice_log=""):
                 "internalID": sales_invoice.name,
                 "purchaseOrderReference": sales_invoice.po_no if sales_invoice.po_no else "",
                 "purchaseOrderDescription": "",
-                "salesOrderReference": "",
+                "salesOrderReference": "الشركة تخضع لنظام الدفعات المقدمة لعام ٢٠٢٦",
                 "salesOrderDescription": "",
                 "proformaInvoiceNumber": "",
                 "payment": {
