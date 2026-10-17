@@ -8,6 +8,7 @@ import frappe
 import json
 from frappe import _
 from erpnext.stock.get_item_details import _get_item_tax_template
+from e_invoice.custom.python.eta_payment import SALES_ORDER_REFERENCE, get_bank_account_no_eta
 from decimal import Decimal
 from six import string_types
 from frappe.utils.password import get_decrypted_password
