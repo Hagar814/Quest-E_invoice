@@ -459,13 +459,13 @@ def post_invoice(docnames, e_invoice_log=""):
                 "internalID": sales_invoice.name,
                 "purchaseOrderReference": sales_invoice.po_no if sales_invoice.po_no else "",
                 "purchaseOrderDescription": "",
-                "salesOrderReference": "الشركة تخضع لنظام الدفعات المقدمة لعام ٢٠٢٦",
+                "salesOrderReference": SALES_ORDER_REFERENCE,
                 "salesOrderDescription": "",
                 "proformaInvoiceNumber": "",
                 "payment": {
                     "bankName": sales_invoice.bank if sales_invoice.bank else "",
                     "bankAddress": "",
-                    "bankAccountNo": sales_invoice.bank_account_no_eta if sales_invoice.bank_account_no_eta else "",
+                    "bankAccountNo": get_bank_account_no_eta(sales_invoice),
                     "bankAccountIBAN": sales_invoice.iban if sales_invoice.iban else "",
                     "swiftCode": sales_invoice.swift_code if sales_invoice.swift_code else "",
                     "terms": sales_invoice.p_terms if sales_invoice.p_terms else ""
@@ -881,15 +881,14 @@ def credit_note(docnames, e_invoice_log=''):
                 "taxpayerActivityCode": actcode,
                 "internalID": sales_invoice.name,
                 "purchaseOrderReference": sales_invoice.po_no if sales_invoice.po_no else "",
-                "salesOrderReference": sales_invoice.so_refrence if sales_invoice.so_refrence else "",
+                "salesOrderReference": SALES_ORDER_REFERENCE,
                 "purchaseOrderDescription": "",
-                "salesOrderReference": "",
                 "salesOrderDescription": "",
                 "proformaInvoiceNumber": "",
                 "payment": {
                     "bankName": sales_invoice.bank if sales_invoice.bank else "",
                     "bankAddress": "",
-                    "bankAccountNo": sales_invoice.bank_account_no_eta if sales_invoice.bank_account_no_eta else "",
+                    "bankAccountNo": get_bank_account_no_eta(sales_invoice),
                     "bankAccountIBAN": sales_invoice.iban if sales_invoice.iban else "",
                     "swiftCode": sales_invoice.swift_code if sales_invoice.swift_code else "",
                     "terms": sales_invoice.p_terms if sales_invoice.p_terms else ""
